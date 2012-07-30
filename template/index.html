@@ -15,10 +15,10 @@
     {% for picture in pictures %}
       <p>{{ picture.name }}</p>
     {% endfor %}
-    
-    
     <br/>
-    <form enctype="multipart/form-data" method="POST">
+    upload picture: {{ upload_picture }}
+    <br/>
+    <form action="{{ upload_picture }}" enctype="multipart/form-data" method="POST">
       <input type="file" name="image" /><br/>
       nome:<input type="text" name="name" /><br/>
       universidade:<input type="text" name="university" /><br/>
@@ -26,8 +26,6 @@
       <input type="submit" name="opcao" value="upload" />
       <!--<input type="submit" name="opcao" value="carregar" />-->
     </form>
-    
-    
     
   </body>
 </html>

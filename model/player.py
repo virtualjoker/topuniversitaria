@@ -1,4 +1,5 @@
 from google.appengine.ext import db
+from google.appengine.ext import blobstore
 
 
 class Player(db.Model):
@@ -11,7 +12,7 @@ class Player(db.Model):
   name = db.StringProperty()
   
   # Players picture
-  picture = db.BlobProperty()
+  picture = blobstore.BlobReferenceProperty()
   
   # Pair is missing
   # pair = reference property
